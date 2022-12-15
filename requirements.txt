@@ -1,0 +1,7 @@
+uvicorn
+fastapi
+pydantic
+typing
+numpy
+lightgbm
+pandas

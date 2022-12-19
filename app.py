@@ -44,8 +44,8 @@ def array_endpoint(request: Request, input: InputArray):
     # Return the prediction in the response
     return prediction
 
-if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# if __name__ == '__main__':
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
     
     # changed 127.0.0.1 to 0.0.0.0 for railway.app deployment
     # you can go to "/docs" or "/redoc" endpoint to get the API documentation

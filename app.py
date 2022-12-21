@@ -3,9 +3,24 @@ import uvicorn
 from fastapi import FastAPI, Request
 from pydantic import BaseModel, Field
 from typing import List, Union
+from fastapi.middleware.cors import CORSMiddleware
 from models import get_crop_model,get_fertilizer_model,get_input
 
 app = FastAPI()
+
+# ------------------------------------------
+
+# Enabling CORS policy
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Load the trained models
 crop_model = get_crop_model()

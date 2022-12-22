@@ -6,7 +6,15 @@ from typing import List, Union
 from fastapi.middleware.cors import CORSMiddleware
 from models import get_crop_model,get_fertilizer_model,get_input
 
-app = FastAPI()
+
+description = """
+### Crop Recommendation JSON Input 
+    { "array": [N,P,K,temperature,humidity,ph,rainfall] }
+### Fertilizer Recommendation JSON Input 
+    { "array": [Temparature,Humidity,Moisture,Nitrogen,Potassium,Phosphorous,Soil Type,Crop Type] }
+"""
+
+app = FastAPI(description=description)
 
 # ------------------------------------------
 
@@ -60,8 +68,11 @@ def array_endpoint(request: Request, input: InputArray):
     return prediction
 
 # if __name__ == '__main__':
-#     uvicorn.run(app, host="0.0.0.0", port=8000)
+#     uvicorn.run(app, host="0.0.0.0", port=8080)
     
     # changed 127.0.0.1 to 0.0.0.0 for railway.app deployment
     # you can go to "/docs" or "/redoc" endpoint to get the API documentation
+    
+    # CLI command
+    # uvicorn app:app --host 0.0.0.0 --port 8080
 

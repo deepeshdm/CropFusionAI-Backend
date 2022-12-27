@@ -7,6 +7,7 @@ It contains the following things :
 - Trained ML models for Crop & Fertilizer Classification
 - Backend FastAPI services that exposes both models through REST API's.
 
+<div align="center"> <h3>  🔥 API Docs 👉 <a href="https://8080-797137136eb6451193a1f8c64a951490.patr.cloud/docs"> here </a> <div align="center"> </h3> </div>
 <div align="center">
 <img src="/data/fapi.png" width="95%"/>
 </div>

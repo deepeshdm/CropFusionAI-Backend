@@ -11,6 +11,38 @@ It contains the following things :
 <img src="/data/fapi.png" width="95%"/>
 </div>
 
+
+## Code Examples
+Below are some code examples you can utilize to send post requests to different endpoints with different payloads to make the most out of the ML models.
+
+### 1] Crop Recommendation API
+```
+import requests
+
+url = "https://8080-797137136eb6451193a1f8c64a951490.patr.cloud/crop"
+
+payload = { "array": [55,44,33,40,75,6.5,300] }
+
+response = requests.post(url, json=payload)
+
+print(response.json())
+
+```
+
+### 2] Fertilizer Recommendation API
+```
+import requests
+
+url = "https://8080-797137136eb6451193a1f8c64a951490.patr.cloud/fertilizer"
+
+payload = { "array": [Temparature,Humidity,Moisture,Nitrogen,Potassium,Phosphorous,Soil Type,Crop Type] }
+
+response = requests.post(url, json=payload)
+
+print(response.json())
+
+```
+
 ## Links to Resources
 - Crop Recommendation Dataset [here](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
 - Fertilizer Recommendation Dataset [here](https://www.kaggle.com/datasets/gdabhishek/fertilizer-prediction)

@@ -16,31 +16,23 @@ It contains the following things :
 Below are some code examples you can utilize to send post requests to different endpoints with different payloads to make the most out of the ML models.
 
 ### 1] Crop Recommendation API
+
 ```python
 import requests
-
 url = "https://8080-797137136eb6451193a1f8c64a951490.patr.cloud/crop"
-
 payload = { "array": [55,44,33,40,75,6.5,300] }
-
 response = requests.post(url, json=payload)
-
 print(response.json())
-
 ```
 
 ### 2] Fertilizer Recommendation API
+
 ```python
 import requests
-
 url = "https://8080-797137136eb6451193a1f8c64a951490.patr.cloud/fertilizer"
-
 payload = { "array": [33,56,30,88,91,12,"Sandy","Cotton"] }
-
 response = requests.post(url, json=payload)
-
 print(response.json())
-
 ```
 
 ## Links to Resources
